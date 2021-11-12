@@ -2,35 +2,42 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EmployeePresentOrAbsent
+namespace EmployeeWageDaily
 {
-    class empAttendance
+    public class empWageDaily
     {
-        public void Compute()
+        public void compute()
         {
+
 
             const int Present = 1;
             const int Absent = 0;
+            const int EmpWagePerHour = 80;
+            int EmpHours = 0;
+            int EmpDailyWage;
 
             Random rand = new Random();
-            int check = rand.Next(0, 2);
-            if (check == Present)
+            int randomvalue = rand.Next(0, 2);
+            if (randomvalue == Present)
             {
-                Console.WriteLine("Employee is Present");
+                EmpHours = 8;
+
             }
-            else if (check == Absent)
+            else if (randomvalue == Absent)
             {
-                Console.WriteLine("Employee is Absent");
+                EmpHours = 0;
+
             }
+            EmpDailyWage = EmpHours * EmpWagePerHour;
+            Console.WriteLine("Employee Wage is " + EmpDailyWage);
             Console.ReadKey();
         }
         class Program
         {
-            public static void Main(string[] args)
+            public static void Main(String[] args)
             {
-                empAttendance obj1 = new empAttendance();
-                obj1.Compute();
-
+                empWageDaily Empobj1 = new empWageDaily();
+                Empobj1.compute();
             }
         }
     }
