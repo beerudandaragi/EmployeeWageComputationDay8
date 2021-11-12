@@ -6,7 +6,7 @@ namespace EmployeePresentOrAbsent
 {
     class empAttendance
     {
-        public void compute()
+        public void Compute()
         {
 
             const int Present = 1;
@@ -29,7 +29,7 @@ namespace EmployeePresentOrAbsent
             public static void Main(string[] args)
             {
                 empAttendance obj1 = new empAttendance();
-                obj1.compute();
+                obj1.Compute();
 
             }
         }
