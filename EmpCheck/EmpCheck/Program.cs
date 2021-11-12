@@ -4,15 +4,16 @@ using System.Text;
 
 namespace EmpCheck
 {
-    class EmployeeWage
+    class program
     {
-        public void ComputeEmpWage()
+        public const int Is_Part_Time = 1;
+        public const int IS_FULLTIME = 2;
+        public const int EMP_RATE_PER_HOURS = 80;
+        public const int Num_Of_Working_days = 20;
+        public const int Max_Hours_In_Month = 100;
+
+        public static int ComputeEmpWage()
         {
-            const int Is_Part_Time = 1;
-            const int IS_FULLTIME = 2;
-            const int EMP_RATE_PER_HOURS = 80;
-            const int Num_Of_Working_days = 10;
-            const int Max_Hours_In_Month = 30;
             int EmpHours = 0, TotalEmpHours = 0, TotalWorkingDays = 0;
             while (TotalEmpHours <= Max_Hours_In_Month && TotalWorkingDays < Num_Of_Working_days)
             {
@@ -22,10 +23,10 @@ namespace EmpCheck
                 switch (Empcheck)
                 {
                     case Is_Part_Time:
-                        EmpHours = 8;
+                        EmpHours = 4;
                         break;
                     case IS_FULLTIME:
-                        EmpHours = 9;
+                        EmpHours = 8;
                         break;
 
                     default:
@@ -34,22 +35,20 @@ namespace EmpCheck
                 }
                 TotalEmpHours += EmpHours;
                 Console.WriteLine("Days:" + TotalWorkingDays + "Emphrs:" + EmpHours);
-
-
             }
-            int TotalEmpWage = TotalEmpHours * EMP_RATE_PER_HOURS;
-            Console.WriteLine("Total Emp Wage:" + TotalEmpWage);
-            Console.ReadKey();
-        }
-    }
+            int TotalEmpwage = TotalEmpHours * EMP_RATE_PER_HOURS;
+            Console.WriteLine("Total Emp Wage:" + TotalEmpwage);
+            return TotalEmpwage;
 
-    class program
-    {
-        public static void Main(string[] args)
+
+        }
+        static void Main(string[] args)
         {
-            EmployeeWage obj1 = new EmployeeWage();
-            obj1.ComputeEmpWage();
+            ComputeEmpWage();
+            Console.ReadLine();
         }
 
+
     }
+
 }
