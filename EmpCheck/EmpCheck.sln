@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpCheck", "EmpCheck\EmpCheck.csproj", "{095F08DD-C90D-40E7-9769-0A25668475B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{095F08DD-C90D-40E7-9769-0A25668475B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095F08DD-C90D-40E7-9769-0A25668475B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095F08DD-C90D-40E7-9769-0A25668475B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095F08DD-C90D-40E7-9769-0A25668475B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A5FB412-9E9F-4770-9093-01A3B09FEAB0}
+	EndGlobalSection
+EndGlobal
