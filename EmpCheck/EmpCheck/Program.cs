@@ -2,28 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EmployeeWageDaily
+namespace EmpWagePartTime
 {
-    public class empWageDaily
+    public class EmpPartTime
     {
         public void compute()
         {
+            int Is_Part_Time = 1;
+            int IS_FULLTIME = 2;
 
-
-            const int Present = 1;
-            const int Absent = 0;
-            const int EmpWagePerHour = 80;
+            int EmpWagePerHour = 200;
             int EmpHours = 0;
-            int EmpDailyWage;
+            int EmpDailyWage = 0;
 
             Random rand = new Random();
-            int randomvalue = rand.Next(0, 2);
-            if (randomvalue == Present)
+            int randomvalue = rand.Next(0, 3);
+            if (randomvalue == IS_FULLTIME)
             {
                 EmpHours = 8;
 
             }
-            else if (randomvalue == Absent)
+            else if (randomvalue == Is_Part_Time)
+            {
+                EmpHours = 4;
+
+            }
+            else
             {
                 EmpHours = 0;
 
@@ -34,10 +38,11 @@ namespace EmployeeWageDaily
         }
         class Program
         {
-            public static void Main(String[] args)
+            public static void Main(string[] args)
             {
-                empWageDaily Empobj1 = new empWageDaily();
-                Empobj1.compute();
+                EmpPartTime EmpObj1 = new EmpPartTime();
+                EmpObj1.compute();
+
             }
         }
     }
